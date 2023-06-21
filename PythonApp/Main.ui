@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>594</width>
+    <height>692</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>594</width>
+    <height>692</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>594</width>
+    <height>692</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Community Detection</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox_json">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>30</y>
+     <width>121</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Load Json</string>
+   </property>
+   <widget class="QPushButton" name="pushButton_loadData_json">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>81</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Load Data</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_txt">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>30</y>
+     <width>121</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Load txt</string>
+   </property>
+   <widget class="QPushButton" name="pushButton_loadData_txt">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>81</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Load Data</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>120</y>
+     <width>571</width>
+     <height>561</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab_create_graph">
+    <attribute name="title">
+     <string>Create Graph</string>
+    </attribute>
+    <widget class="QPushButton" name="pushButton_create_graph">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>10</y>
+       <width>91</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Create Graph</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_upper">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>10</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>999999999</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="graph_base">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>50</y>
+       <width>461</width>
+       <height>441</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_optimum">
+    <attribute name="title">
+     <string>Find Optimum K Value</string>
+    </attribute>
+    <widget class="QLabel" name="graph_optimum">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>50</y>
+       <width>461</width>
+       <height>441</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_find_optimum">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>10</y>
+       <width>91</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Find Optimum K</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_optimum_save">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>500</y>
+       <width>121</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Save Communities</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_community">
+    <attribute name="title">
+     <string>Find Community</string>
+    </attribute>
+    <widget class="QLabel" name="graph_community">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>541</width>
+       <height>441</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_community">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>10</y>
+       <width>101</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Find Community</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_k">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>10</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>999999999</number>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_community_save">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>500</y>
+       <width>121</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Save Community</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
